@@ -1,0 +1,78 @@
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: WORK.import
+Observations:  27
+Variables:     3
+
+Variables (in alphabetical order):
+
+  #  Variable           Type    Len  Format  Label
+---  -----------------  ----  -----  ------  -----
+  1  Change_in_VAS       Num      8          
+  2  First_VAS           Num      8          
+  3  Type_of_Treatment  Char     20          
+
+-------------------------------------------------------------------------------
+
+                                        Descriptive Statistics by Treatment Type                                        
+
+                                                  The MEANS Procedure
+
+                                           Analysis Variable : Change_in_VAS
+
+        Type_of_Treatment            N Obs           Mean         Median        Std Dev
+        -------------------------------------------------------------------------------
+        Injection                        9           2.11           0.00           9.29
+        Surgery                          9          41.35          46.04          22.85
+        Surgery & Injection              9          12.24           0.00          30.26
+        -------------------------------------------------------------------------------
+
+                                 Comparison of Visual Acuity Recovery by Treatment Type                                 
+
+                                     Kruskal-Wallis Rank Sum Test (Non-parametric)                                      
+
+                                   The NPAR1WAY Procedure                                    
+                   Wilcoxon Scores (Rank Sums) for Variable Change_in_VAS                    
+
+Type_of_Treatment           N  Sum of Scores  Expected Under H0  Std Dev Under H0  Mean Score
+-------------------  --------  -------------  -----------------  ----------------  ----------
+Surgery & Injection         9       105.0000           126.0000           19.2700     11.6700
+Injection                   9        87.0000           126.0000           19.2700      9.6700
+Surgery                     9       186.0000           126.0000           19.2700     20.6700
+
+   Kruskal-Wallis Test   
+
+Statistic           Value
+---------------  --------
+Chi-Square         9.9894
+DF                      2
+Pr > Chi-Square    0.0068
+P Value            0.0068
+
+                                 Linear Regression: Baseline Vision predicting Recovery                                 
+
+                                                   The REG Procedure                                                    
+                                                     Model: MODEL1                                                      
+                                           Dependent Variable: Change_in_VAS                                            
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                   1      4330.43932   4330.43932      7.06    0.0135
+Error                  25     15333.51774    613.34071                    
+Corrected Total        26     19663.95707                                 
+
+Root MSE          24.76572    R-Square            0.2202
+Dependent Mean      18.56889    Adj R-Sq            0.1890
+Coeff Var        133.37210
+
+                       Parameter Estimates                       
+
+Variable         DF  Estimate  Standard Error   t Value  Pr > |t|
+---------  --------  --------  --------------  --------  --------
+Intercept         1  34.81093         7.75114      4.49    0.0001
+First_VAS         1  -0.49297         0.18553     -2.66    0.0135
+
+                                       Does Initial Vision Dictate Recovery Size?                                       
+

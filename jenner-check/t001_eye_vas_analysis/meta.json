@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_eye_vas_analysis",
+  "source_file": "project EYE (1).sas",
+  "source_blob_sha": "e3434b37cc3ef180d4ee91a5b9f498e5f4867f81",
+  "source_commit": "cd46c35f50ad914a4b3ed986e17fff3eb19061b7",
+  "notes": "Eye-treatment VAS study: PROC MEANS/NPAR1WAY(Wilcoxon)/REG/SGPLOT by treatment modality. PROC IMPORT of an external SAS-Studio xlsx path replaced with an inline DATALINES WORK.IMPORT built from the study's real three modalities (Surgery, Injection, Surgery & Injection) with sampled First_VAS/Change_in_VAS values; a one-line DATA extended_data(SET analysis_data) added so the regression section runs standalone. All PROC statements unchanged."
+}
